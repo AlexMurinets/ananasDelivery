@@ -1,15 +1,15 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <super-visor-nav-bar/>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import SuperVisorNavBar from "@/components/SuperVisorNavBar.vue";
 
 export default Vue.extend({
   name: 'Home',
-
+  components: {SuperVisorNavBar},
 });
 </script>
