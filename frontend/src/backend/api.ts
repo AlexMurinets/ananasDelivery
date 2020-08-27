@@ -1,15 +1,8 @@
 import axios from "axios";
 
-const url = "http://localhost:9090/api"
-
-const api = axios.create({
-    baseURL: url,
-    timeout: 10000
-})
-
-
-export default {
-    get(){
-        return axios.get("/getHello");
+export default axios.create({
+    baseURL: "http://localhost:9090/api",
+    headers: {
+        "Content-type": "application/json"
     }
-}
+});
