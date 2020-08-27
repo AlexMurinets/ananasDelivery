@@ -3,10 +3,13 @@
 import api from "@/backend/Api";
 
 
-//Сервис создается как класс
+//Сервис создается как "класс"
 class TestService {
-    public getAll(){
-        return api.get("/getHello");
+    public getMessage(){
+        return api.get("/getMessage");
+    }
+    public getArray(){
+        return api.get("/getArray");
     }
 }
 

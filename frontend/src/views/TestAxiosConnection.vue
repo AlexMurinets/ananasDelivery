@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <!--Синтаксис такой же-->
-    <h1>Text :{{message}}</h1>
+    <p>Simple message : {{message}}</p>
+    <p>Array : {{list}}</p>
   </div>
 </template>
 
@@ -16,16 +17,21 @@ import TestService from "@/backend/TestService"
 @Component
 export default class TestAxiosConnection extends Vue{
   private message = "";
-
+  //Взамен Data : () => {....}
+  private list: Array<object> = [];
   //Вместо beforeCreated можно использовать конструктор
     constructor(options: ComponentOptions<Vue>) {
     super(options);
-    this.getHello();
+    this.getMessage();
+    this.getArray();
   }
 
   //Обязательно нужен метод, если просто вызвать TestService.getAll() ничего работать не будет
-  public getHello(){
-    TestService.getAll().then((response)=> {this.message = response.data,console.log(response.data)});
+  public getMessage(){
+    TestService.getMessage().then((response)=> {this.message = response.data,console.log(this.message)});
+  }
+  public getArray(){
+    TestService.getArray().then((response)=> {this.list = response.data, console.log(this.list)})
   }
 
 }

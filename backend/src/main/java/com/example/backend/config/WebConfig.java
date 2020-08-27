@@ -11,6 +11,11 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**");
+        registry
+                //Для того чтобы можно было делать request с front-end
+                .addMapping("/**");
+                //Нужно для того чтобы request мог делать только наш сайт
+//                .allowedOrigins("http://localhost:8080");
+
     }
 }

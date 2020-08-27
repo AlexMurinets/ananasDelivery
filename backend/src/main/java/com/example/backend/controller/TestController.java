@@ -5,12 +5,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDate;
+import java.util.*;
+
 @RestController
-@RequestMapping("/api")
 public class TestController {
 
-    @GetMapping("/getHello")
-    public String name(){
+
+    @GetMapping("/getMessage")
+    public String getMessage(){
         return "hello";
     }
+
+    @GetMapping("/getArray")
+    private Map getArray(){
+        Map<String,String> list = new HashMap<>();
+        list.put("Message","Hi!");
+        list.put("Time","25.09.2009");
+      return list;
+    }
 }
+
