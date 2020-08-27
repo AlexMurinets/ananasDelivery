@@ -1,15 +1,15 @@
 <template>
   <div class="home">
-    <super-visor-nav-bar/>
+    {{component.name}}
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import SuperVisorNavBar from "@/components/SuperVisorNavBar.vue";
+import {Component,Vue} from "vue-property-decorator";
 
-export default Vue.extend({
-  name: 'Home',
-  components: {SuperVisorNavBar},
-});
+@Component
+export default class Home extends Vue{
+
+}
+
 </script>
