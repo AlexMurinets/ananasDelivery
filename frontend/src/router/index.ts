@@ -2,15 +2,21 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import TestAxiosConnection from "@/views/TestAxiosConnection.vue";
 import About from "@/views/About.vue";
+import Main from "@/views/Main.vue";
 
 Vue.use(VueRouter)
 
   const routes: Array<RouteConfig> = [
   {
-    path: '/',
+    path: '/test',
     name: 'Test',
     component: TestAxiosConnection
   },
+    {
+      path: '/main',
+      name: 'Main',
+      component: Main
+    },
   {
     path: '/about',
     name: 'About',
