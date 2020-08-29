@@ -20,7 +20,7 @@ export default class TestAxiosConnection extends Vue{
   //Взамен Data : () => {....}
   private list: Array<object> = [];
   //Вместо beforeCreated можно использовать конструктор
-    constructor(options: ComponentOptions<Vue>) {
+    constructor(options: any) {
     super(options);
     this.getMessage();
     this.getArray();

@@ -13,3 +13,9 @@ export default Vue.extend({
   }),
 });
 </script>
+
+<style>
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+</style>
