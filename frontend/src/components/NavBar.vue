@@ -1,11 +1,11 @@
 <template>
-  <v-container>
+  <v-container class="border">
     <v-row>
-
       <v-col cols = "4" md = "4">
         <v-row>
           <v-col>
-            <img src="../img/logo (1).webp" class="img" height="80"/>
+            <img src="../img/logo (1).webp" class="img hidden-sm-and-down" alt="img" height="80"/>
+            <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer" style="margin-top: 1px"></v-app-bar-nav-icon>
           </v-col>
           <v-col cols = "7" class="hidden-md-and-down">
             <div class="mt-1">
@@ -37,12 +37,12 @@
           >
             <v-list >
               <v-list-item-action class="mx-4 my-6">
-                <img src="../img/logo (1).webp" class="img" height="80"/>
+                <img src="../img/logo (1).webp" class="img" height="80" alt = "img"/>
               </v-list-item-action>
 
               <v-list-item link v-for="link of links" :key="link + link.text">
                 <v-list-item-action>
-                  <v-icon >mdi-home</v-icon>
+                  <v-icon >{{link.icon}}</v-icon>
                 </v-list-item-action>
 
                 <v-list-item-content>
@@ -64,9 +64,9 @@ import {Component, Vue} from "vue-property-decorator";
 @Component({})
 export default class NavBar extends Vue{
 private links: Array<object> = [
-  {text:"Список магазинов",route:"#" },
-  {text:"Как мы работаем",route:"#" },
-  {text:"Отзывы",route:"#" },
+  {text:"Список магазинов",route:"#",icon: "mdi-format-line-spacing"},
+  {text:"Как мы работаем",route:"#",icon: "mdi-car"},
+  {text:"Отзывы",route:"#",icon: "mdi-comment-account" },
 
 ];
 private drawer = false;
@@ -87,13 +87,10 @@ a{
   font-weight: 400;
 
 }
-.collapse-nav{
-  display: none !important;
-}
 .btn-main{
   border-radius: 100px;
   cursor: pointer;
-  padding: 21.5px 20px;
+  padding: 21px 19px;
   color: white !important;
   background: orange;
   transition: 0.3s;
@@ -107,6 +104,7 @@ a{
 .btn-main:hover{
   opacity: 100%;
 }
+
 @media (max-width: 600px) {
   a{
     font-size: 10px;
