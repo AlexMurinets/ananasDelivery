@@ -27,7 +27,7 @@
       <v-col  v-if="true" class="d-flex justify-end mt-5" >
         <div>
 
-
+          <!--Bucket-->
           <v-menu
               :close-on-content-click="false"
               :nudge-width="360"
@@ -59,6 +59,8 @@
               </div>
             </v-card>
           </v-menu>
+
+          <!--LeftNavBar-->
           <v-navigation-drawer
               v-model="drawer"
               app
@@ -83,7 +85,39 @@
             </v-list>
           </v-navigation-drawer>
 
-          <span class="btn-main" style="cursor: pointer"><v-icon style="color: white" >mdi-account</v-icon></span>
+          <!--Login = false-->
+          <v-dialog v-if="!login" width="500">
+            <template v-slot:activator="{ on, attrs }">
+              <span class="btn-main"
+                 v-bind="attrs"
+                 v-on="on"
+                 style="cursor: pointer"><v-icon style="color: white">mdi-account</v-icon>
+              </span>
+            </template>
+            <v-card>
+              <v-card-title class="headline orange lighten-2">
+                <span style="color: white">
+                  Вход
+                </span>
+              </v-card-title>
+
+              <v-card-text class="my-3 mt-10">
+                <v-text-field label="Email" required></v-text-field>
+                <v-text-field label="Password" type="password" required></v-text-field>
+              </v-card-text>
+
+
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="success">Регистрация</v-btn>
+                <v-btn color="warning">Вход</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+          <!--Login = true-->
+          <span v-else>
+            <span  class="btn-main" style="cursor: pointer"><v-icon style="color: white">mdi-account</v-icon></span>
+          </span>
 
         </div>
       </v-col>
@@ -106,6 +140,7 @@ private links: Array<object> = [
   {text:"Отзывы",route:"#",icon: "mdi-comment-account" },
 
 ];
+private login = false;
 private defaultProducts: Array<object> = [
   {message: "Ананас", price: 10,route:"/"},
   {message: "Lays chess", price: 20,route:"/"},
