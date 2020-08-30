@@ -3,6 +3,8 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import TestAxiosConnection from "@/views/TestAxiosConnection.vue";
 import About from "@/views/About.vue";
 import Main from "@/views/Main.vue";
+import Bucket from "@/views/Bucket.vue";
+
 
 Vue.use(VueRouter)
 
@@ -13,16 +15,18 @@ Vue.use(VueRouter)
     component: TestAxiosConnection
   },
     {
+      path: '/bucket',
+      name: 'Bucket',
+      component: Bucket
+    },
+    {
       path: '/main',
       name: 'Main',
       component: Main
     },
   {
-    path: '/about',
+    path: '/',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: About
   }
 ]

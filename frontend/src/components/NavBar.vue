@@ -5,7 +5,7 @@
         <v-row>
           <v-col>
             <img src="../img/logo (1).webp" class="img hidden-sm-and-down" alt="img" height="80"/>
-            <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer" style="margin-top: 1px"></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer" style="margin-top: 5.5px"></v-app-bar-nav-icon>
           </v-col>
           <v-col cols = "7" class="hidden-md-and-down">
             <div class="mt-1">
