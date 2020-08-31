@@ -59,7 +59,7 @@ button{
   bottom: 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .footer-display{
     display: block;
   }

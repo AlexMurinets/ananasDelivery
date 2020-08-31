@@ -20,10 +20,7 @@
           <span>Нет еще аккаунта? <router-link :to = "'/'">Присоединяйся</router-link> </span>
         </div>
       </div>
-
-
   </div>
-
   <div v-else>
 
   </div>
@@ -39,6 +36,9 @@ export default class MobileAccount extends Vue{
 </script>
 
 <style scoped>
+.margin-container{
+  margin-top: 5vh;
+}
 .header-title-login{
  display: none;
 }
@@ -48,7 +48,7 @@ export default class MobileAccount extends Vue{
 .input-group-login{
   display: none;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .logo-img-login{
     display: block;
     height: 90px;
@@ -68,9 +68,7 @@ export default class MobileAccount extends Vue{
   .input-group-login{
     width: 65%;
   }
-  .margin-container{
-    margin-top: 5vh;
-  }
+
 }
 @media (max-width: 425px) {
   .input-group-login{

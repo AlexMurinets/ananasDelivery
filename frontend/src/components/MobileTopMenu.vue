@@ -1,5 +1,5 @@
 <template>
-  <div class="header-display">
+  <div class="header-display" style="z-index: 1000">
     <div class="header-up d-flex justify-space-between py-2">
       <div class="mx-auto search-bar s-w" style="border-radius: 5px">
           <v-icon class="search-btn">mdi-magnify</v-icon>
@@ -65,7 +65,7 @@ export default class MobileTopMenu extends Vue{
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .header-display{
     display: block;
   }

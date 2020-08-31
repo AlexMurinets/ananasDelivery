@@ -5,6 +5,8 @@ import About from "@/views/About.vue";
 import Main from "@/views/Main.vue";
 import Bucket from "@/views/Bucket.vue";
 import MobileAccount from "@/components/MobileAccount.vue";
+import MobileSearch from "@/components/MobileSearch.vue";
+import MobileBucket from "@/components/MobileBucket.vue";
 
 
 Vue.use(VueRouter)
@@ -15,6 +17,12 @@ Vue.use(VueRouter)
     name: 'Test',
     component: TestAxiosConnection
   },
+
+    {
+      path: '/search',
+      name: 'Search',
+      component: MobileSearch
+    },
     {
       path: '/account',
       name: 'Account',
@@ -23,7 +31,7 @@ Vue.use(VueRouter)
     {
       path: '/bucket',
       name: 'Bucket',
-      component: Bucket
+      component: MobileBucket
     },
     {
       path: '/main',

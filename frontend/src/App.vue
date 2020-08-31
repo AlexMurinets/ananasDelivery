@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <mobile-top-menu/>
-    <router-view class="mt-15"/>
+    <router-view class="my-15"/>
     <mobile-nav-bar/>
   </v-app>
 </template>
