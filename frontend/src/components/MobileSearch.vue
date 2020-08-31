@@ -2,7 +2,7 @@
 <v-container >
   <div class="products">
   <v-row style="z-index: 1" class="d-flex justify-center">
-    <div v-for="object of category" :key="object.text" class="col-5 col-sm-3 col-md-2 mt-3 mx-3 elevation-1 item" >
+    <div @click="route(object.route)" v-for="object of category" :key="object.text" class="col-5 col-sm-3 col-md-2 mt-3 mx-3 elevation-1 item" >
       <div class="d-flex justify-center mt-4">
         <v-img :src="object.img" class="img-category" alt=""></v-img>
       </div>
@@ -20,6 +20,7 @@
 import {Component, Vue} from "vue-property-decorator";
 @Component
 export default class MobileNavBar extends Vue{
+
   private category: Array<object> = [
     {text:"Молочная продукция",img:require("../img/searchIcons/milk.svg"),route:"/"},
     {text:"Мясо",img:require("../img/searchIcons/meat.svg"),route:"/"},
@@ -36,14 +37,10 @@ export default class MobileNavBar extends Vue{
     {text:"Детские товары",img:require("../img/searchIcons/baby.svg"),route:"/"},
     {text:"Корм для животных",img:require("../img/searchIcons/dog-food.svg"),route:"/"},
     {text:"Замороженные продукты",img:require("../img/searchIcons/refrigerator.svg"),route:"/"},
-
-
-
-
-
-
   ]
-
+  public route(path: string){
+    this.$router.push(path);
+  }
 }
 </script>
 
