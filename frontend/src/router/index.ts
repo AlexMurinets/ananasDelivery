@@ -4,6 +4,7 @@ import TestAxiosConnection from "@/views/TestAxiosConnection.vue";
 import About from "@/views/About.vue";
 import Main from "@/views/Main.vue";
 import Bucket from "@/views/Bucket.vue";
+import MobileAccount from "@/components/MobileAccount.vue";
 
 
 Vue.use(VueRouter)
@@ -14,6 +15,11 @@ Vue.use(VueRouter)
     name: 'Test',
     component: TestAxiosConnection
   },
+    {
+      path: '/account',
+      name: 'Account',
+      component: MobileAccount
+    },
     {
       path: '/bucket',
       name: 'Bucket',

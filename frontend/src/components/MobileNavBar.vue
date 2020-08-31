@@ -1,10 +1,11 @@
 <template>
   <div class="footer-display">
-    <v-bottom-navigation
-        class="footer d-flex justify-space-around">
-      <button class="nav-button" @click = "route('/home')">
+    <v-bottom-navigation class="footer d-flex justify-space-around">
+
+      <button class="nav-button" @click = "route('/main')">
         <v-icon>mdi-home</v-icon>
       </button>
+
       <button class="nav-button" @click = "route('/search')">
         <v-icon>mdi-magnify</v-icon>
       </button>
@@ -12,6 +13,7 @@
       <button class="nav-button" @click = "route('/bucket')">
         <v-icon>mdi-cart-outline</v-icon>
       </button>
+
       <button class="nav-button" @click = "route('/account')">
         <v-icon>mdi-account</v-icon>
       </button>
@@ -31,9 +33,15 @@ export default class MobileNavBar extends Vue{
 </script>
 
 <style scoped>
+button{
+  outline: none !important;
+  border: none !important;
+}
 .nav-button{
   border-radius: 10px;
   transition: .3s;
+  border: 0 !important;
+
 }
 .nav-button:hover{
   background-color: #d6d6d6;
@@ -51,7 +59,7 @@ export default class MobileNavBar extends Vue{
   bottom: 0;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 1000px) {
   .footer-display{
     display: block;
   }

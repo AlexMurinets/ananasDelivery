@@ -53,6 +53,7 @@ export default class MobileTopMenu extends Vue{
   padding: 6px 6px;
   margin: 4px 4px;
   border-radius: 80px;
+  outline: none !important;
 }
 .search-btn:hover{
   background-color: #e3e3e3;
@@ -64,7 +65,7 @@ export default class MobileTopMenu extends Vue{
 }
 
 
-@media (max-width: 770px) {
+@media (max-width: 1000px) {
   .header-display{
     display: block;
   }
