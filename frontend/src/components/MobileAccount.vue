@@ -49,6 +49,7 @@ export default class MobileAccount extends Vue{
   display: none;
 }
 @media (max-width: 1100px) {
+
   .logo-img-login{
     display: block;
     height: 90px;
@@ -62,6 +63,12 @@ export default class MobileAccount extends Vue{
     display: block;
     width: 55%;
   }
+}
+@media (max-width: 540px) {
+  .margin-container{
+    margin-top: 5vh
+  }
+
 }
 
 @media (max-width: 600px) {
