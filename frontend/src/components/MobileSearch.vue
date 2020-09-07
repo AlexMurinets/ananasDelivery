@@ -1,24 +1,17 @@
 <template>
-<v-container >
-  <div class="products" style = "cursor: pointer">
-  <v-row style="z-index: 1" class="d-flex justify-center">
-    <div @click="route(object.route + object.text)" v-for="object of category" :key="object.text" class="col-5 col-sm-3 col-md-2 mt-3 mx-3 elevation-1 item" >
-      <div class="d-flex justify-center mt-4">
-        <v-img :src="object.img" class="img-category" alt=""></v-img>
-      </div>
-      <div class="text-center mt-4 mb-3 category-title">
-        {{object.text}}
-      </div>
+  <div class="container">
+    <div class="row d-flex justify-center">
+      <mobile-category  v-for="c of category" :key="c.text" :category = "c"/>
     </div>
-  </v-row>
   </div>
-
-</v-container>
 </template>
 
 <script lang="ts">
 import {Component, Vue} from "vue-property-decorator";
-@Component
+import MobileCategory from "@/components/MobileCategory.vue";
+@Component({
+  components: {MobileCategory}
+})
 export default class MobileNavBar extends Vue{
 
   private category: Array<object> = [
@@ -38,39 +31,9 @@ export default class MobileNavBar extends Vue{
     {text:"Корм для животных",img:require("../img/searchIcons/dog-food.svg"),route:"/"},
     {text:"Замороженные продукты",img:require("../img/searchIcons/refrigerator.svg"),route:"/"},
   ]
-  public route(path: string){
-    this.$router.push(path);
-  }
 }
 </script>
 
 <style scoped>
-.item{
-  border-radius: 5px;
-}
 
-.products{
-  display: none;
-}
-
-.category-title{
-  width: 100%;
-  font-size: 12px;
-}
-@media (max-width: 1100px) {
-  .products{
-    margin-top: 5%;
-    display: block;
-  }
-}
-
-@media (max-width: 425px) {
-  .img-category{
-    height: 10% !important;
-  }
-  .products{
-    margin-top: 0;
-    display: block;
-  }
-}
 </style>
