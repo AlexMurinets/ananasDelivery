@@ -7,6 +7,7 @@ import Bucket from "@/views/Bucket.vue";
 import MobileAccount from "@/components/MobileAccount.vue";
 import MobileSearch from "@/components/MobileSearch.vue";
 import MobileBucket from "@/components/MobileBucket.vue";
+import MobileProducts from "@/components/MobileProducts.vue";
 
 
 Vue.use(VueRouter)
@@ -36,7 +37,7 @@ Vue.use(VueRouter)
     {
       path: '/main',
       name: 'Main',
-      component: Main
+      component: MobileProducts
     },
   {
     path: '/',
