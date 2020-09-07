@@ -1,5 +1,5 @@
 <template>
-  <div class="col-6 col-sm-4 col-md-4 my-1" style="border: 1px solid #f1f1f1; border-radius: 5px; padding: 4px">
+  <div class="col-5 col-sm-3 col-md-3 my-1 mx-1" style="border: 1px solid #f1f1f1; border-radius: 5px; padding: 4px">
     <div class="d-flex justify-center my-3">
       <img :src="getProduct.img" class="img-product"/>
     </div>

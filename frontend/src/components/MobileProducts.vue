@@ -1,5 +1,5 @@
 <template>
-  <div class="row mx-2">
+  <div class="row mx-2 d-flex justify-center">
       <mobile-product v-for="p of products" :key="p" :product="p" />
   </div>
 
@@ -18,6 +18,7 @@ export default class MobileProducts extends Vue{
     {name: "name",price: 10, sale: 0, kg: 1, img:require("../img/products/Banana.png"),desc: "desc"},
     {name: "name",price: 80, sale: 40, kg: 1, img:require("../img/searchIcons/milk.svg"),desc: "desc"},
     {name: "name",price: 110, sale: 0, kg: 1, img:require("../img/products/Banana.png"),desc: "desc"},
+    {name: "name",price: 140, sale: 100, kg: 5, img:require("../img/searchIcons/milk.svg"),desc: "desc"},
     {name: "name",price: 140, sale: 100, kg: 5, img:require("../img/searchIcons/milk.svg"),desc: "desc"},
 
 
