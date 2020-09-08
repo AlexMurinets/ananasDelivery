@@ -1,6 +1,6 @@
 
 //Импорт api
-import api from "@/backend/Api";
+import api from "@/backend/api";
 
 
 //Сервис создается как "класс"

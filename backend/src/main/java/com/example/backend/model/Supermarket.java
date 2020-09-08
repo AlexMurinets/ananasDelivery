@@ -10,6 +10,8 @@ public class Supermarket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+
     @Lob
     private Byte[] image;
 
@@ -61,5 +63,13 @@ public class Supermarket {
 
     public void setItems(List<Item> items) {
         this.items = items;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
