@@ -11,6 +11,7 @@ import AddItem from "@/components/AddSupermarket.vue";
 import TestAxiosConnection from "@/views/TestAxiosConnection.vue";
 
 
+
 Vue.use(VueRouter)
 
   const routes: Array<RouteConfig> = [
@@ -37,7 +38,7 @@ Vue.use(VueRouter)
     {
       path: '/main',
       name: 'Main',
-      component: Main
+      component: MobileProducts
     },
   {
     path: '/',
